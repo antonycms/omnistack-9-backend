@@ -1,0 +1,4 @@
+node_modules
+.env
+.volume_databases
+.mongo_volume
