@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
 // controllers
-const SessionController = require('./app/controllers/SessionController');
+const UserController = require('./app/controllers/UserController');
 
-router.post('sessions', SessionController.store);
+router.post('/sessions', UserController.store);
 
 module.exports = router;

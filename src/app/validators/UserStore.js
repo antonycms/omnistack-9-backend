@@ -5,7 +5,6 @@ module.exports = async (req, res, next) => {
 
   const schema = Yup.object().shape({
     name: Yup.string().required(),
-    password: Yup.string().min(6).required(),
     email: Yup.string().email().required(),
   });
 

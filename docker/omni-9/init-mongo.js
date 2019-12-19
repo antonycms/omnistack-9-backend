@@ -1,6 +1,6 @@
 db.createUser({
-  user: "omni",
-  pwd: "test",
+  user: "user",
+  pwd: "pass",
   roles: [
     {
       role: "readWrite",
@@ -9,6 +9,6 @@ db.createUser({
   ]
 })
 
-db.omni.insert({
+db.test.insert({
   test: "test"
-})
+});

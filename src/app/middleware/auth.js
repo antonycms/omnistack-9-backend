@@ -1,7 +1,6 @@
 const JWT = require('jsonwebtoken');
 const { promisify } = require('util');
 
-// eslint-disable-next-line consistent-return
 async function checkToken(req, res, next) {
   const authHeader = req.headers.authorization;
 

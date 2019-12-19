@@ -1,23 +1,21 @@
 const User = require('../models/User');
-const { hash } = require('bcrypt');
 
-class User {
+class UserController {
   async store(req, res) {
     const data = req.body;
 
     let user = await User.findOne({ email: data.email });
-    if (user) {
-      return res.statu(400).json('user exists');
+    if (!user) {
+      user = await User.create(data);
     }
 
-    const userData = {
-      email: data.email,
-      name: data.name,
-      password: bcrypt.hash(data.password, 8),
-    }
+    const { email, _id: id } = user;
 
-    user = await User.create(userData);
-
-    return res.json(user);
+    return res.json({
+      email,
+      id,
+    });
   }
 }
+
+module.exports = new UserController();

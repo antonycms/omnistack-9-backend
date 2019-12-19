@@ -1,5 +1,7 @@
 require('dotenv-save').config();
 const Express = require('express');
+const Cors = require('cors');
+
 const routes = require('./routes');
 
 require('./database');
@@ -14,6 +16,7 @@ class App {
 
   middlewares() {
     this.server.use(Express.json());
+    this.server.use(Cors());
   }
 
   routes() {
