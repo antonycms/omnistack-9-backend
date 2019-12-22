@@ -1,6 +1,6 @@
 const User = require('../models/User');
 
-class UserController {
+class SessionController {
   async store(req, res) {
     const data = req.body;
 
@@ -18,4 +18,4 @@ class UserController {
   }
 }
 
-module.exports = new UserController();
+module.exports = new SessionController();
