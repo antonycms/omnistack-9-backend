@@ -1,6 +1,8 @@
 require('dotenv-save').config();
+
 const Express = require('express');
 const Cors = require('cors');
+const { resolve } = require('path');
 
 const routes = require('./routes');
 
@@ -15,8 +17,9 @@ class App {
   }
 
   middlewares() {
-    this.server.use(Express.json());
     this.server.use(Cors());
+    this.server.use(Express.json());
+    this.server.use('/thumbnail', Express.static(resolve(__dirname, '..', 'tmp', 'uploads')));
   }
 
   routes() {
