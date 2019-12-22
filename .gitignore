@@ -2,3 +2,5 @@ node_modules
 .env
 .volume_databases
 .mongo_volume
+tmp/uploads/*
+!tmp/uploads/.empty
