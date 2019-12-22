@@ -9,10 +9,9 @@ class SessionController {
       user = await User.create(data);
     }
 
-    const { email, _id: id } = user;
+    const { _id: id } = user;
 
     return res.json({
-      email,
       id,
     });
   }
