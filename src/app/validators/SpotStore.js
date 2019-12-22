@@ -3,9 +3,14 @@ const Yup = require('yup');
 module.exports = async (req, res, next) => {
   const data = req.body;
 
+  data.techs = data.techs.split(',');
+
+  data.file = req.file;
+
   const schema = Yup.object().shape({
-    name: Yup.string().required(),
-    email: Yup.string().email().required(),
+    price: Yup.number(),
+    techs: Yup.array().required(),
+    user: Yup.string().required(),
   });
 
   try {
