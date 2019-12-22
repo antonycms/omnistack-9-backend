@@ -1,0 +1,193 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2019-12-22T16:06:08.605Z",
+  "__export_source": "insomnia.desktop.app:v7.0.6",
+  "resources": [
+    {
+      "_id": "req_53b47f23a14642a2b412d475b2cebdae",
+      "authentication": {},
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "description": "",
+            "fileName": "/home/antony/background.jpg",
+            "id": "pair_9dedb01c60044468911b596b403f8d01",
+            "name": "file",
+            "type": "file",
+            "value": ""
+          },
+          {
+            "description": "",
+            "id": "pair_08e9881e989443e7a13798d54a12f9ef",
+            "multiline": false,
+            "name": "techs",
+            "type": "text",
+            "value": "Nodejs, React"
+          },
+          {
+            "description": "",
+            "id": "pair_deb73b7b14b64e67b8a47c5cb9c4f84a",
+            "name": "user",
+            "value": "5dfb56c4ba9d8746b1498f48"
+          },
+          {
+            "description": "",
+            "id": "pair_355ef08d393a4c0988583a0190b78c67",
+            "name": "price",
+            "value": "50"
+          }
+        ]
+      },
+      "created": 1577026283813,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_c37130bfc38d42309c5d2f8de528a471",
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1577026283813,
+      "method": "POST",
+      "modified": 1577030652752,
+      "name": "create",
+      "parameters": [],
+      "parentId": "fld_eb5b355155134c2dab7eba57b2fb947b",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/spots",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_eb5b355155134c2dab7eba57b2fb947b",
+      "created": 1577026269188,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1577026269188,
+      "modified": 1577026269188,
+      "name": "spot",
+      "parentId": "wrk_be19b7ff6b47451e82083e91fdd3bab4",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_be19b7ff6b47451e82083e91fdd3bab4",
+      "created": 1577026185187,
+      "description": "",
+      "modified": 1577026185187,
+      "name": "omni9",
+      "parentId": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_28ef1e3982d8425192e5064d3325b3b5",
+      "authentication": {},
+      "body": {},
+      "created": 1577026274962,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "disabled": false,
+          "id": "pair_7046ae7ae49e45d8b8ba0276bdc4002f",
+          "name": "id",
+          "value": "5dfb56c4ba9d8746b1498f48"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1577026274962,
+      "method": "GET",
+      "modified": 1577026345265,
+      "name": "list",
+      "parameters": [],
+      "parentId": "fld_eb5b355155134c2dab7eba57b2fb947b",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/spots",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ffe8e4b2e26f47c493bdd9e3506cab48",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\"test@test.com\"\n}"
+      },
+      "created": 1577026212127,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_7d5a34d6d9074d4590a8fddf844a848b",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1577026212127,
+      "method": "POST",
+      "modified": 1577026260590,
+      "name": "create",
+      "parameters": [],
+      "parentId": "fld_d3d038939203438790d6b2ec2e19298e",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/sessions",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d3d038939203438790d6b2ec2e19298e",
+      "created": 1577026193319,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1577026193319,
+      "modified": 1577026200929,
+      "name": "session",
+      "parentId": "wrk_be19b7ff6b47451e82083e91fdd3bab4",
+      "_type": "request_group"
+    },
+    {
+      "_id": "env_a1134b08121f70d4cbbde37e0a0b80519d4e90e9",
+      "color": null,
+      "created": 1577026185216,
+      "data": {
+        "base_url": "localhost:3333"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "isPrivate": false,
+      "metaSortKey": 1577026185216,
+      "modified": 1577026250945,
+      "name": "Base Environment",
+      "parentId": "wrk_be19b7ff6b47451e82083e91fdd3bab4",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_a1134b08121f70d4cbbde37e0a0b80519d4e90e9",
+      "cookies": [],
+      "created": 1577026185227,
+      "modified": 1577026185227,
+      "name": "Default Jar",
+      "parentId": "wrk_be19b7ff6b47451e82083e91fdd3bab4",
+      "_type": "cookie_jar"
+    }
+  ]
+}
