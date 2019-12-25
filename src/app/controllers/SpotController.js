@@ -4,10 +4,9 @@ class SpotController {
   async store(req, res) {
     const data = req.body;
     const host = process.env.SERVER_HOST;
-    const port = process.env.SERVER_PORT;
     const { filename: path } = req.file;
 
-    data.thumbnail = `http://${host}:${port}/thumbnail/${path}`;
+    data.thumbnail = `http://${host}/thumbnail/${path}`;
     data.price = data.price || 0;
 
 
