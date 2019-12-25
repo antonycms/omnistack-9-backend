@@ -1,12 +1,11 @@
 const { server } = require('./app');
 
-const PORT = process.env.SERVER_PORT;
-const HOST = process.env.SERVER_HOST;
+const PORT = 3333
 
 function init() {
-  server.listen(PORT, HOST);
+  server.listen(PORT);
 
-  console.log(`Server running on http://${HOST}:${PORT}/`);
+  console.log(`Server running on PORT ${PORT}`);
 }
 
 init();
