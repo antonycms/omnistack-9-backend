@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 
+const URI = process.env.MONGO_URI;
 const host = process.env.MONGO_HOST;
 const port = process.env.MONGO_PORT;
 const user = process.env.MONGO_USER;
@@ -8,7 +9,7 @@ const pass = process.env.MONGO_PASSWORD;
 const database = process.env.MONGO_DATABASE;
 
 // mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[database][?options]]
-const uri = `mongodb://${user}:${pass}@${host}:${port}/${database}`;
+const uri = URI || `mongodb://${user}:${pass}@${host}:${port}/${database}`;
 
 class Database {
   constructor() {
