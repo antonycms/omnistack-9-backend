@@ -21,13 +21,9 @@ class SpotController {
   }
 
   async index(req, res) {
-    const { id } = req.headers;
+    const { tech } = req.query;
 
-    if (!id) {
-      return res.status(400).json({ error: 'validation fails' });
-    }
-
-    const spots = await Spot.find({ user: id });
+    const spots = await Spot.find({ techs: tech });
 
     return res.json(spots);
   }
